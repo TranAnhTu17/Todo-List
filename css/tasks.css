@@ -1,0 +1,59 @@
+.task-list .task-item {
+    position: relative;
+    list-style: none;
+    height: 54px;
+    background-color: #fff;
+    border-radius: 18px;
+    margin-top: 4px;
+    line-height: 54px;
+    letter-spacing: 1px;
+    box-shadow: 4px 2px 6px 0 #f1f1f7;
+    overflow: hidden;
+}
+
+.task-item .task-check-box {
+    cursor: pointer;
+}
+.task-item .task-check-box .task-check {
+    position: absolute;
+    width: 0;
+    height: 0;
+    font-size: 24px;
+    left: 24px;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.task-item .task-check-box .checked {
+    opacity: 1;
+}
+
+.task-item .task-check-box .task-circle-thin {
+    float: left;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #333232;
+    border-radius: 13px;
+    margin: 14px 0 14px 20px;
+}
+
+.task-list .task-item .task-content {
+    margin-left: 24px;
+}
+
+.task-list .task-item .task-trash {
+    position: absolute;
+    background: #e74c3c;
+    font-size: 20px;
+    width: 50px;
+    right: -50px;
+    color: #fff;
+    border-radius: 0 18px 18px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    z-index: 3;
+}
+.task-list .task-item:hover .task-trash {
+    right: 0;
+}

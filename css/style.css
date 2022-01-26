@@ -1,0 +1,323 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --screen-width: 310px;
+    --screen-height: 690px;
+
+}
+
+body {
+    background-color: #d9dff8;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.home-page {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,20px);
+    width: var(--screen-width);
+    height: var(--screen-height);
+    background-color: #f9faff;
+    border-radius: 44px;
+    padding: 44px 24px;
+}
+
+.nav-list {
+    display: flex;
+}
+.nav-list .nav-item {
+    color: #9294a6;
+    font-size: 20px;
+    list-style: none;
+    cursor: pointer;
+}
+
+.nav-item:first-child {
+    flex: 3;
+}
+
+.nav-item:last-child {
+    margin-left: 24px;
+}
+
+.sup {
+    margin-top: 24px;
+    font-size: 36px;
+}
+
+.category-title , .task-title {
+    color: #a5a7ba;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: 24px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+.category-list {
+    padding: 6px 0;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.category-list::-webkit-scrollbar {
+    display: none;
+}
+
+.category-item {
+    display: inline-block;
+    list-style: none;
+    background-color: #fff;
+    height: 94px;
+    width: 160px;
+    box-shadow: 5px 3px 7px 2px #e9e9f1;
+    padding: 14px;
+    margin-right: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.category-item .task-number {
+    font-size: 12px;
+    color: #888994;
+}
+.category-item .category-item-title {
+    margin: 4px 0 10px 0;
+    font-size: 18px;
+}
+.progress-bar {
+    width: 100%;
+    background-color: grey;
+}
+  
+.progress {
+    width: 42%;
+    height: 4px;
+    background-color: #f14af7;
+    box-shadow: 2px 3px 5px 0 #f14af7;
+}
+.task-list {
+    height: 290px;
+    overflow-y: auto;
+}
+
+.task-list::-webkit-scrollbar {
+    display: none;
+}
+
+.task-list .task-item {
+    position: relative;
+    list-style: none;
+    height: 54px;
+    background-color: #fff;
+    border-radius: 18px;
+    margin-top: 4px;
+    line-height: 54px;
+    letter-spacing: 1px;
+    box-shadow: 4px 2px 6px 0 #f1f1f7;
+    overflow: hidden;
+}
+
+.task-item .task-check-box {
+    cursor: pointer;
+}
+.task-item .task-check-box .task-check {
+    position: absolute;
+    width: 0;
+    height: 0;
+    font-size: 24px;
+    left: 24px;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.task-item .task-check-box .checked {
+    opacity: 1;
+}
+
+.task-item .task-check-box .task-circle-thin {
+    float: left;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #333232;
+    border-radius: 13px;
+    margin: 14px 0 14px 20px;
+}
+
+.task-list .task-item .task-content {
+    margin-left: 24px;
+}
+
+.task-list .task-item .task-trash {
+    position: absolute;
+    background: #e74c3c;
+    font-size: 20px;
+    width: 46px;
+    right: -52px;
+    color: #fff;
+    border-radius: 0 18px 18px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+.task-list .task-item:hover .task-trash {
+    right: 0;
+}
+.home-page .add-btn {
+    position: fixed;
+    width: 44px;
+    height: 44px;
+    border-radius: 26px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #0869ff;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    bottom: 40px;
+    right: 24px;
+}
+
+.home-page .add-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--screen-width);
+    height: var(--screen-height);
+    background-color: #f9faff;
+    border-radius: 44px;
+    padding: 44px 24px;
+    transform: scale(0);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.home-page .add-page.show {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.add-page .add-page-close {
+    position: relative;
+    float: right;
+    width: 48px;
+    height: 48px;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+.add-page .add-page-close:hover {
+    background-color: #ccc;
+}
+.add-page .add-page-close i {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.add-page input[type="text"] {
+    width: 100%;
+    margin: 140px 12px 32px 0;
+    padding: 4px;
+    border: none;
+    background-color: #f9faff;
+    font-size: 24px;
+    outline: none;
+}
+
+.add-page-choice {
+    display: flex;
+}
+.add-page .calendar-choice {
+    height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 27px;
+    color: #ccc;
+    line-height: 50px;
+    text-align: center;
+    padding: 0 20px;
+    margin-right: 12px;
+    cursor: pointer;
+}
+.add-page .calendar-choice i {
+    font-size: 18px;
+    margin-right: 8px;
+}
+
+.add-page .category-choice {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border: 1px solid #ccc;
+    border-radius: 27px;
+    cursor: pointer;
+    position: relative;
+}
+.add-page .category-choice::before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 24px;
+    width: 24px;
+    border: 2px solid #0f6bff;
+    border-radius: 14px;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color: #0f6bff;
+}
+.add-page .category-choice::after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 14px;
+    width: 14px;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.add-page .sub-item {
+    margin-top: 88px;
+    color: #888;
+    font-size: 20px;
+    display: flex;
+    justify-content:space-evenly;
+}
+.add-page .sub-item span {
+    cursor: pointer;
+}
+
+.add-page .new-task-btn {
+    position: absolute;
+    width: 150px;
+    height: 48px;
+    right: 24px;
+    bottom: 48px;
+    background-color: #0869ff;
+    border: none;
+    border-radius: 26px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 1px;
+    opacity: 0.6;
+    pointer-events: none;
+}
+.add-page .new-task-btn.active {
+    opacity: 1;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.add-page .new-task-btn i {
+    margin-left: 12px;
+    
+}

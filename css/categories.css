@@ -1,0 +1,42 @@
+.category-list {
+    padding: 6px 0;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.category-list::-webkit-scrollbar {
+    display: none;
+}
+
+.category-item {
+    display: inline-block;
+    list-style: none;
+    background-color: #fff;
+    height: 94px;
+    width: 160px;
+    box-shadow: 5px 3px 7px 2px #e9e9f1;
+    padding: 14px;
+    margin-right: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.category-item .task-number {
+    font-size: 12px;
+    color: #888994;
+}
+.category-item .category-title {
+    margin: 4px 0 10px 0;
+    font-size: 18px;
+}
+.progress-bar {
+    width: 100%;
+    background-color: grey;
+}
+  
+.progress {
+    width: 42%;
+    height: 4px;
+    background-color: #f14af7;
+    box-shadow: 2px 3px 5px 0 #f14af7;
+}
