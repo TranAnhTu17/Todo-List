@@ -27,6 +27,19 @@ body {
     padding: 44px 24px;
 }
 
+.home-page::after {
+    content: "";
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 5px;
+    width: 120px;
+    background-color: #18191d;
+    border-radius: 8px;
+    box-shadow: 0 0 2px 1px #d3cdcd;
+}
+
 .nav-list {
     display: flex;
 }
@@ -170,9 +183,9 @@ body {
 }
 .home-page .add-btn {
     position: fixed;
-    width: 44px;
-    height: 44px;
-    border-radius: 26px;
+    width: 40px;
+    height: 40px;
+    border-radius: 24px;
     font-size: 20px;
     color: #fff;
     background-color: #0869ff;
@@ -181,6 +194,13 @@ body {
     z-index: 1;
     bottom: 40px;
     right: 24px;
+    animation: wave 2s infinite linear alternate;
+}
+
+@keyframes wave {
+    to {
+        box-shadow: 0 0 16px 8px #76a2e4;
+    }
 }
 
 .home-page .add-page {
@@ -195,6 +215,18 @@ body {
     transform: scale(0);
     opacity: 0;
     transition: all 0.3s ease-in-out;
+}
+.add-page::after {
+    content: "";
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 5px;
+    width: 120px;
+    background-color: #18191d;
+    border-radius: 8px;
+    box-shadow: 0 0 2px 1px #eee9e9;
 }
 
 .home-page .add-page.show {
@@ -303,6 +335,7 @@ body {
     right: 24px;
     bottom: 48px;
     background-color: #0869ff;
+    box-shadow: 0 0 8px 4px #80acee;
     border: none;
     border-radius: 26px;
     font-weight: 600;

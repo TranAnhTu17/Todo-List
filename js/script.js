@@ -6,11 +6,17 @@ const closeBtn = document.querySelector('.add-page .add-page-close');
 addBtn.onclick = () => {
     console.log([addPage])
     addPage.classList.add("show")
+    setTimeout(() => {
+        addBtn.style.display = 'none';
+    },200)
+
 }
 
 closeBtn.onclick = () => {
     let inputBox = addPage.querySelector('input[type="text"]')
     inputBox.value = "";
     addPage.classList.remove("show")
-
+    setTimeout(() => {
+        addBtn.style.display = 'block';
+    },200)
 }

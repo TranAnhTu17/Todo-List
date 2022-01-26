@@ -21,11 +21,16 @@ newTaskBtn.onclick = () => {
     } else {
         listTask = JSON.parse(getLocalStorage)
     }
-    listTask.push({ name: userData, done: false })
+    listTask.push({ name: userData, category: "", done: false })
     localStorage.setItem("New Todo", JSON.stringify(listTask))
     showTasks();
 
     addPage.classList.remove("show")
+
+    newTaskBtn.classList.remove("active")
+    setTimeout(() => {
+        addBtn.style.display = 'block';
+    },200)
 }
 
 
@@ -50,6 +55,7 @@ function showTasks() {
     })
     taskList.innerHTML = newTask;
     inputBox.value = ""
+    
 }
 
 function deleteTask(index) {
