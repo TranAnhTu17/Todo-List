@@ -1,3 +1,20 @@
+.task-list {
+    height: 290px;
+    overflow-y: auto;
+}
+
+.task-list::-webkit-scrollbar {
+    display: none;
+}
+.task-title {
+    color: #a5a7ba;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: 24px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
 .task-list .task-item {
     position: relative;
     list-style: none;
@@ -45,14 +62,13 @@
     position: absolute;
     background: #e74c3c;
     font-size: 20px;
-    width: 50px;
-    right: -50px;
+    width: 46px;
+    right: -52px;
     color: #fff;
     border-radius: 0 18px 18px 0;
     cursor: pointer;
     transition: all 0.3s ease;
     text-align: center;
-    z-index: 3;
 }
 .task-list .task-item:hover .task-trash {
     right: 0;
