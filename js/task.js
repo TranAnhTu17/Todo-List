@@ -30,7 +30,7 @@ newTaskBtn.onclick = () => {
     newTaskBtn.classList.remove("active")
     setTimeout(() => {
         addBtn.style.display = 'block';
-    },200)
+    }, 200)
 }
 
 
@@ -45,17 +45,21 @@ function showTasks() {
     let newTask = '';
     listTask.forEach((task, index) => {
         newTask += `<li class="task-item">
-            <div onclick="completeTask(this,${index})" class="task-check-box">
+            <div onclick="completeTask(${index})" class="task-check-box">
                 <span class="task-circle-thin"></span>
                 <span class="task-check"><i class="ti-check"></i></span>
             </div>
             <span class="task-content">${task.name}</span>
             <span onclick="deleteTask(${index})" class="task-trash"><i class="ti-trash"></i></span>
         </li>`;
+
     })
     taskList.innerHTML = newTask;
+    listTask.forEach((task, index) => {
+        checkTask(index, task.done)
+    })
     inputBox.value = ""
-    
+
 }
 
 function deleteTask(index) {
@@ -66,17 +70,31 @@ function deleteTask(index) {
     showTasks()
 }
 
-function completeTask(taskCheckBox, index) {
+function completeTask(index) {
+    let getLocalStorage = localStorage.getItem("New Todo")
+    if (getLocalStorage == null) {
+        listTask = []
+    } else {
+        listTask = JSON.parse(getLocalStorage)
+    }
+    listTask[index].done = !listTask[index].done;
+    localStorage.setItem("New Todo", JSON.stringify(listTask))
 
-    let taskCheck = taskCheckBox.querySelector('.task-check')
-    taskCheck.classList.toggle('checked')
+    checkTask(index, listTask[index].done)
+}
 
-    let taskContent = taskCheckBox.nextElementSibling
-
-    let textDecoration = taskContent.style.textDecoration;
-    if (textDecoration === "") {
+function checkTask(index, done) {
+    let taskItem = taskList.querySelectorAll('.task-item')[index]
+    console.log(taskList.querySelectorAll('.task-item'))
+    let taskCheck = taskItem.querySelector('.task-check')
+    let taskContent = taskItem.querySelector('.task-content')
+    if (done) {
+        taskCheck.classList.add('checked')
         taskContent.style.textDecoration = 'line-through';
     } else {
-        taskContent.style.textDecoration = ""
+        taskCheck.classList.remove('checked')
+        taskContent.style.textDecoration = '';
     }
 }
+
+
