@@ -15,94 +15,124 @@
 
 <body>
     <div class="wrapper">
-        <div class="home-page">
-            <div id="nav">
-                <ul class="nav-list">
-                    <li class="nav-item"><i class="ti-line-double"></i></li>
-                    <li class="nav-item"><i class="ti-search"></i></li>
-                    <li class="nav-item"><i class="ti-bell"></i></li>
-                </ul>
+        <div class="overview-page">
+            <div class="back-btn"><i class="ti-angle-left"></i></div>
+            <div class="overview-avatar">
+                <i class="ti-user"></i>
             </div>
 
-            <h2 class="sup">
-                What's up, Tu!
-            </h2>
-
-            <div class="category">
-                <h3 class="category-title">Categories</h3>
-                <ul class="category-list">
-                    <li class="category-item">
-                        <p class="task-number">
-                            24 tasks
-                        </p>
-                        <h4 class="category-item-title">All</h4>
-                        <div class="progress-bar">
-                            <div class="progress progress-pink"></div>
-                        </div>
-                    </li>
-                    <li class="category-item">
-                        <p class="task-number">
-                            16 tasks
-                        </p>
-                        <h4 class="category-item-title">Personal</h4>
-                        <div class="progress-bar">
-                            <div class="progress progress-blue"></div>
-                        </div>
-                    </li>
-                    <li class="category-item">
-                        <p class="task-number">
-                            8 tasks
-                        </p>
-                        <h4 class="category-item-title">School</h4>
-                        <div class="progress-bar">
-                            <div class="progress progress-pink"></div>
-                        </div>
-                    </li>
-                    <li class="category-item">
-                        <p class="task-number">
-                            9 tasks
-                        </p>
-                        <h4 class="category-item-title">School</h4>
-                        <div class="progress-bar">
-                            <div class="progress progress-blue"></div>
-                        </div>
-                    </li>
-
-                </ul>
-            </div>
-
-            <div class="task">
-                <h3 class="task-title">Today's tasks</h3>
-                <button class="add-btn">+</button>
-                <ul class="task-list">
-                    <!-- Data comes from local storage -->
-                </ul>
-            </div>
-
-            <div class="add-page">
-                <div class="add-page-close"><i class="ti-close"></i></div>
-                <input type="text" placeholder="Enter new task">
-    
-                <div class="add-page-choice">
-                    <div class="calendar-choice">
-                        <i class="ti-calendar"></i>Today
-                    </div>
-                    
-                    <div class="category-choice">
-                    
-                    </div>
+            <h1 class="overview-name">Tu Chan</h1>
+            <div class="navbar">
+                <div class="navbar-item">
+                    <i class="ti-bookmark"></i>
+                    <span>Templates</span>
                 </div>
-    
-                <div class="sub-item">
-                    <span><i class="ti-support"></i></span>
-                    <span><i class="ti-flag-alt"></i></span>
-                    <span><i class="ti-star"></i></span>
+                <div class="navbar-item">
+                    <i class="ti-layout-grid2"></i>
+                    <span>Categories</span>
                 </div>
-                <button class="new-task-btn">New task<i class="ti-angle-up"></i></button>
+                <div class="navbar-item">
+                    <i class="ti-pie-chart"></i>
+                    <span>Analytics</span>
+                </div>
+                <div class="navbar-item">
+                    <i class="ti-settings"></i>
+                    <span>Settings</span>
+                </div>
+            </div>
+            <div class="overview-line"></div>
+
+
+            <div class="home-page">
+                <div id="nav">
+                    <ul class="nav-list">
+                        <li class="nav-item"><i class="ti-line-double"></i></li>
+                        <li class="nav-item"><i class="ti-search"></i></li>
+                        <li class="nav-item"><i class="ti-bell"></i></li>
+                    </ul>
+                </div>
+
+                <h2 class="sup">
+                    What's up, Tu!
+                </h2>
+
+                <div class="category">
+                    <h3 class="category-title">Categories</h3>
+                    <ul class="category-list">
+                        <li class="category-item">
+                            <p class="task-number">
+                                24 tasks
+                            </p>
+                            <h4 class="category-item-title">All</h4>
+                            <div class="progress-bar">
+                                <div class="progress progress-pink"></div>
+                            </div>
+                        </li>
+                        <li class="category-item">
+                            <p class="task-number">
+                                16 tasks
+                            </p>
+                            <h4 class="category-item-title">Personal</h4>
+                            <div class="progress-bar">
+                                <div class="progress progress-blue"></div>
+                            </div>
+                        </li>
+                        <li class="category-item">
+                            <p class="task-number">
+                                8 tasks
+                            </p>
+                            <h4 class="category-item-title">School</h4>
+                            <div class="progress-bar">
+                                <div class="progress progress-pink"></div>
+                            </div>
+                        </li>
+                        <li class="category-item">
+                            <p class="task-number">
+                                9 tasks
+                            </p>
+                            <h4 class="category-item-title">School</h4>
+                            <div class="progress-bar">
+                                <div class="progress progress-blue"></div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="task">
+                    <h3 class="task-title">Today's tasks</h3>
+                    <button class="add-btn">+</button>
+                    <ul class="task-list">
+                        <!-- Data comes from local storage -->
+                    </ul>
+                </div>
+
+                <div class="add-page">
+                    <div class="add-page-close"><i class="ti-close"></i></div>
+                    <input type="text" placeholder="Enter new task">
+
+                    <div class="add-page-choice">
+                        <div class="calendar-choice">
+                            <i class="ti-calendar"></i>Today
+                        </div>
+
+                        <div class="category-choice">
+
+                        </div>
+                    </div>
+
+                    <div class="sub-item">
+                        <span><i class="ti-support"></i></span>
+                        <span><i class="ti-flag-alt"></i></span>
+                        <span><i class="ti-star"></i></span>
+                    </div>
+                    <button class="new-task-btn">New task<i class="ti-angle-up"></i></button>
+                </div>
             </div>
         </div>
 
-        
+
+
     </div>
 
     <script src="./js/script.js"></script>

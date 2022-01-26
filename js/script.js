@@ -1,10 +1,12 @@
+const overviewPage = document.querySelector('.overview-page');
 const homePage = document.querySelector('.home-page');
 const addPage = document.querySelector('.add-page');
 const addBtn = document.querySelector('.home-page .add-btn');
 const closeBtn = document.querySelector('.add-page .add-page-close');
+const lineDouble = document.querySelector('.home-page .nav-item .ti-line-double')
+const backBtn = document.querySelector('.overview-page .back-btn')
 
 addBtn.onclick = () => {
-    console.log([addPage])
     addPage.classList.add("show")
     setTimeout(() => {
         addBtn.style.display = 'none';
@@ -19,4 +21,12 @@ closeBtn.onclick = () => {
     setTimeout(() => {
         addBtn.style.display = 'block';
     },200)
+}
+
+lineDouble.onclick = () => {
+    homePage.classList.add("translate")
+}
+
+backBtn.onclick = () => {
+    homePage.classList.remove("translate")
 }

@@ -42,7 +42,17 @@
     width: 100%;
     background-color: grey;
 }
-  
+
+@keyframes twinklePink {
+    to {
+        box-shadow: 0 0 5px 3px #f178f5;
+    }
+}
+@keyframes twinkleBlue {
+    to {
+        box-shadow: 0 0 5px 3px #5b8eec;
+    }
+}
 .progress {
     width: 42%;
     height: 4px;
@@ -51,9 +61,12 @@
 .progress-pink {
     background-color: #f14af7;
     box-shadow: 2px 3px 5px 0 #f14af7;
+    animation: twinklePink 1s infinite linear alternate;
 }
 
 .progress-blue {
     background-color: #3374ee;
     box-shadow: 2px 3px 5px 0 #3374ee;
+    animation: twinkleBlue 1s infinite linear alternate;
+
 }

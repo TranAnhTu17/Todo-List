@@ -7,6 +7,8 @@
     background-color: #f9faff;
     border-radius: 44px;
     padding: 44px 24px;
+    border: 1px solid #0fbcf9;
+    box-shadow: 0 0 4px 1px #0fbcf9;
     transform: scale(0);
     opacity: 0;
     transition: all 0.3s ease-in-out;
