@@ -23,11 +23,16 @@
     background-color: #fff;
     height: 94px;
     width: 160px;
-    box-shadow: 5px 3px 7px 2px #e9e9f1;
+    box-shadow: 0 0 2px 1px #c4c4c7;
     padding: 14px;
+    margin-left: 5px;
     margin-right: 10px;
     border-radius: 20px;
     cursor: pointer;
+}
+
+.category-item:hover {
+    box-shadow: 0 0 5px 1px #0fbcf9;
 }
 
 .category-item .task-number {
