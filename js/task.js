@@ -1,6 +1,7 @@
 const newTaskBtn = document.querySelector('.add-page .new-task-btn')
 const inputBox = document.querySelector('.add-page input[type="text"]');
 const taskList = document.querySelector('.home-page .task-list')
+const noTaskSign = document.querySelector('.no-task-sign')
 
 inputBox.onkeyup = () => {
     let userData = inputBox.value;
@@ -54,12 +55,18 @@ function showTasks() {
         </li>`;
 
     })
+
     taskList.innerHTML = newTask;
     listTask.forEach((task, index) => {
         checkTask(index, task.done)
     })
     inputBox.value = ""
-
+    
+    if(listTask.length == 0) {
+        noTaskSign.classList.add('show')
+    } else {
+        noTaskSign.classList.remove('show')
+    }
 }
 
 function deleteTask(index) {
