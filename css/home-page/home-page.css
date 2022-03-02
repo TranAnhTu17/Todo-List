@@ -5,7 +5,7 @@
     width: var(--screen-width);
     height: var(--screen-height);
     background-color: #f9faff;
-    border-radius: 44px;
+    border-radius: 36px;
     padding: 44px 24px;
     border: 1px solid #0fbcf9;
     box-shadow: 0 0 4px 1px #0fbcf9;
@@ -15,20 +15,6 @@
 .home-page.translate {
     transform: translateX(220px) scale(0.85);
 }
-
-.home-page::after {
-    content: "";
-    position: absolute;
-    bottom: 8px;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 5px;
-    width: 120px;
-    background-color: #18191d;
-    border-radius: 8px;
-    box-shadow: 0 0 2px 1px #d3cdcd;
-}
-
 .nav-list {
     display: flex;
 }
@@ -83,9 +69,9 @@
 
 .home-page .add-btn {
     position: fixed;
-    width: 40px;
-    height: 40px;
-    border-radius: 24px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50px;
     font-size: 20px;
     color: #fff;
     background-color: #0869ff;
@@ -98,11 +84,13 @@
 }
 
 .no-task-sign {
+    display: block;
     position: absolute;
     background-color: #ffce62;
-    width: 260px;
-    padding: 24px 8px;
-    top: 72%;
+    width: 80%;
+    padding: 24px;
+    top: 66%;
+    right: 10%;
     border-radius: 16px;
     visibility: hidden;
     animation: sign 1.5s infinite alternate;
@@ -130,5 +118,14 @@
     }
     to {
         transform: translateY(8px);
+    }
+}
+
+@media screen and (max-width: 413px) {
+    .home-page {
+        border-radius: 0;
+    }
+    .home-page.translate {
+        border-radius: 36px;
     }
 }

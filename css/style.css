@@ -5,14 +5,13 @@
 }
 
 :root {
-    --screen-width: 310px;
+    --screen-width: 420px;
     --screen-height: 690px;
-
 }
 
 body {
     background-color: #d9dff8;
-    font-size: 14px;
+    font-size: 16px;
     font-family: "Comic Sans MS", "Lucida Sans Unicode", sans-serif;
 }
 
@@ -38,13 +37,17 @@ body {
     width: var(--screen-width);
     height: var(--screen-height);
     background-color: #0e1f55;
-    border-radius: 44px;
+    border-radius: 36px;
     padding: 44px 24px;
     overflow: hidden;
     border: 1px solid #0fbcf9;
     box-shadow: 0 0 4px 1px #0fbcf9;
 }
-
+.overview-page .overview-top {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
 .overview-page .overview-avatar {
     width: 100px;
     height: 100px;
@@ -57,18 +60,20 @@ body {
     margin: 16px 0 0 12px;
     animation: wave 1s infinite linear alternate;
 }
+
 .overview-page .back-btn {
-    position: absolute;
     font-size: 16px;
     color: #fff;
-    width: 44px;
-    height: 44px;
+    width: 50px;
+    height: 50px;
     border: 2px solid #f75bf7;
     border-radius: 24px;
     left: 55%;
-    padding: 9px 0 0 11px;
     cursor: pointer;
     transition: all 0.3s linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .overview-page .back-btn:hover {
@@ -107,6 +112,20 @@ body {
     animation: lineAnimation 2s infinite linear alternate;
 }
 
+@media screen and (max-width: 767px) {
+    :root {
+        --screen-width: 330px;
+    }
+}
 
-
-
+@media screen and (max-width: 413px) {
+    :root {
+        --screen-width: 100%;
+    }
+    .overview-page {
+        top: 0;
+        left: 0;
+        transform: translate(0,0);
+        border-radius: 0;
+    }
+}
