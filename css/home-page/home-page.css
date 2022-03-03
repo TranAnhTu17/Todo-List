@@ -17,10 +17,12 @@
 }
 .nav-list {
     display: flex;
+    justify-content: space-between;
+    gap: 24px;
 }
 .nav-list .nav-item {
     color: #9294a6;
-    font-size: 22px;
+    font-size: 24px;
     list-style: none;
     cursor: pointer;
     transition: all 0.2s linear;
@@ -32,15 +34,7 @@
 }
 
 .nav-item:first-child {
-    flex: 3;
-}
-
-.nav-item:first-child:hover {
-    transform: translateX(8px) scale(1.1);
-}
-
-.nav-item:last-child {
-    margin-left: 24px;
+    margin-right: auto;
 }
 
 .sup {
