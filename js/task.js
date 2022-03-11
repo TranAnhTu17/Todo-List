@@ -92,7 +92,6 @@ function completeTask(index) {
 
 function checkTask(index, done) {
     let taskItem = taskList.querySelectorAll('.task-item')[index]
-    console.log(taskList.querySelectorAll('.task-item'))
     let taskCheck = taskItem.querySelector('.task-check')
     let taskContent = taskItem.querySelector('.task-content')
     if (done) {
